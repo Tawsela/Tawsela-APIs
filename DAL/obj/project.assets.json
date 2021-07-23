@@ -6617,11 +6617,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mark\\source\\repos\\Tawsela\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Tawsela\\Tawsela-back\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\mark\\source\\repos\\Tawsela\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Tawsela\\Tawsela-back\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\mark\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mark\\source\\repos\\Tawsela\\DAL\\obj\\",
+      "outputPath": "C:\\Tawsela\\Tawsela-back\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mark\\AppData\\Roaming\\NuGet\\NuGet.Config",

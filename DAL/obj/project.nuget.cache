@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KYqk0B/hsQNztGEN1WD4dF7c5NWVSgcyAmzxHe5CAR5A8b5Mw3gAnBqfhULgWVz6viNMvITps66LiuSjd/TnxA==",
+  "dgSpecHash": "S1J3jrUGg4jn1vHF/mIKeLpypQb/r1MwGUn2Vw4XrDnOuRBaZzyZY0FQ52mA1mZTp6fp5nmPQbaorueiEo9U5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mark\\source\\repos\\Tawsela\\DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Tawsela\\Tawsela-back\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mark\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\mark\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
