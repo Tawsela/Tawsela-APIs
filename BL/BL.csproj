@@ -39,7 +39,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
     <Folder Include="obj\Debug\net5.0\ref\" />
   </ItemGroup>
 
