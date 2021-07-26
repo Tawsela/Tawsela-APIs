@@ -1,6 +1,8 @@
+using DAL.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,6 +27,10 @@ namespace BL
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Inject Database Connection string
+            services.AddDbContext<ApplicationDBContext>(options => {
+                options.UseSqlServer(Configuration.GetConnectionString("CS"));
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
