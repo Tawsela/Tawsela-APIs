@@ -16,22 +16,27 @@ namespace DAL.Models
         public string CaptainId { get; set; }
 
         [Required]
-        public string LocationFrom { get; set; }
+        public string Departure { get; set; }
 
         [Required]
-        public string LocationTo { get; set; }
-
-        [Required]
-        [DataType(DataType.Date)]
-        public string DepartureDate { get; set; }
+        public string Distination { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
-        public string ArrivalDate { get; set; }
+        public string Date { get; set; }
+        [Required]
+        public int AvilablePassengers { get; set; }
+
+        [Required]
+        public int RecommPrice { get; set; }
+        [Required]
+        public string Notice { get; set; }
+
+
 
         [Required]
         [DataType(DataType.Time)]
-        public DateTime DepartialTime { get; set; }
+        public DateTime Time { get; set; }
 
 
         [InverseProperty("Driver")]
