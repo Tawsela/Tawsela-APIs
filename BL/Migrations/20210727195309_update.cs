@@ -22,23 +22,6 @@ namespace BL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Cars",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CarNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CarOwner = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CarModel = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CarImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    AvailableSeats = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cars", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -121,6 +104,23 @@ namespace BL.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Cars",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CarNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CarOwner = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    CarModel = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CarImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    AvailableSeats = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cars", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Trips",
                 columns: table => new
                 {
@@ -144,7 +144,6 @@ namespace BL.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SSN = table.Column<int>(type: "int", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TripId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CarId = table.Column<int>(type: "int", nullable: false),
@@ -231,6 +230,13 @@ namespace BL.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Cars_CarOwner",
+                table: "Cars",
+                column: "CarOwner",
+                unique: true,
+                filter: "[CarOwner] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Trips_CaptainId",
                 table: "Trips",
                 column: "CaptainId",
@@ -269,6 +275,14 @@ namespace BL.Migrations
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
+                name: "FK_Cars_AspNetUsers_CarOwner",
+                table: "Cars",
+                column: "CarOwner",
+                principalTable: "AspNetUsers",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
                 name: "FK_Trips_AspNetUsers_CaptainId",
                 table: "Trips",
                 column: "CaptainId",
@@ -279,6 +293,10 @@ namespace BL.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropForeignKey(
+                name: "FK_Cars_AspNetUsers_CarOwner",
+                table: "Cars");
+
             migrationBuilder.DropForeignKey(
                 name: "FK_Trips_AspNetUsers_CaptainId",
                 table: "Trips");

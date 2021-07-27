@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Tawsela\\Tawsela-back\\BL\\BL.csproj": {}
+    "C:\\tawsela\\Backend\\Tawsela-APIs\\BL\\BL.csproj": {}
   },
   "projects": {
-    "C:\\Tawsela\\Tawsela-back\\BL\\BL.csproj": {
+    "C:\\tawsela\\Backend\\Tawsela-APIs\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Tawsela\\Tawsela-back\\BL\\BL.csproj",
+        "projectUniqueName": "C:\\tawsela\\Backend\\Tawsela-APIs\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "C:\\Tawsela\\Tawsela-back\\BL\\BL.csproj",
-        "packagesPath": "C:\\Users\\mark\\.nuget\\packages\\",
-        "outputPath": "C:\\Tawsela\\Tawsela-back\\BL\\obj\\",
+        "projectPath": "C:\\tawsela\\Backend\\Tawsela-APIs\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\tawsela\\Backend\\Tawsela-APIs\\BL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
