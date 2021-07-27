@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BL.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CarsController : ControllerBase

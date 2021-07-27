@@ -4,14 +4,16 @@ using DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BL.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20210727151239_qw")]
+    partial class qw
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,6 +85,7 @@ namespace BL.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -125,13 +128,9 @@ namespace BL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CarOwner")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CarOwner")
-                        .IsUnique()
-                        .HasFilter("[CarOwner] IS NOT NULL");
 
                     b.ToTable("Cars");
                 });
@@ -320,15 +319,6 @@ namespace BL.Migrations
                     b.Navigation("Car");
 
                     b.Navigation("Passenger");
-                });
-
-            modelBuilder.Entity("DAL.Models.Car", b =>
-                {
-                    b.HasOne("DAL.Models.ApplicationUser", "Owner")
-                        .WithOne()
-                        .HasForeignKey("DAL.Models.Car", "CarOwner");
-
-                    b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("DAL.Models.Trip", b =>

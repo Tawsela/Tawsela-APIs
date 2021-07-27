@@ -21,7 +21,7 @@ namespace DAL.Models
         [Required]
         public int AvailableSeats { get; set; }
 
-        //[ForeignKey("CarOwner")]
-        //public virtual ApplicationUser Owner { get; set; }
+        [ForeignKey("CarOwner")]
+        public virtual ApplicationUser Owner { get; set; }
     }
 }

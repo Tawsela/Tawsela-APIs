@@ -11,6 +11,7 @@ namespace BL.ModelViews
         [Required(ErrorMessage = "Email is required")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+        public int CarId { get; set; }
 
         [Required(ErrorMessage = "First Name is required")]
         [DataType(DataType.Text)]
@@ -19,6 +20,10 @@ namespace BL.ModelViews
         [Required(ErrorMessage = "Last Name is required")]
         [DataType(DataType.Text)]
         public string LastName { get; set; }
+
+        [Required(ErrorMessage = "UserName is required")]
+        [DataType(DataType.Text)]
+        public string UserName { get; set; }
 
         [Required(ErrorMessage = "Birth Date is required")]
         [DataType(DataType.Date)]
@@ -31,8 +36,6 @@ namespace BL.ModelViews
         public string Password { get; set; }
 
 
-        [Required(ErrorMessage = "Phone Number is required")]
-        [DataType(DataType.PhoneNumber)]
-        public string PhoneNumber { get; set; }
+     
     }
 }

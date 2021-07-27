@@ -31,12 +31,11 @@ namespace BL.Controllers
             this._configuration = configuration;
         }
 
-
         [HttpPost]
         [Route("Login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
-            //check Aboute Email
+            //check AboutEmail
             var user = await userManager.FindByEmailAsync(model.Email);
             //Check If Email Existe
             if (user != null && await userManager.CheckPasswordAsync(user, model.Password))
@@ -88,13 +87,14 @@ namespace BL.Controllers
             {
                 Email = model.Email,
                 PasswordHash = model.Password,
+                UserName = model.UserName,
+                CarId = model.CarId,
                 SecurityStamp = Guid.NewGuid().ToString()
             };
-
+            
             var result = await userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Email creation failed! Please check Email details and try again." });
-
             return Ok(new Response { Status = "Success", Message = "Email created successfully!" });
         }
     }

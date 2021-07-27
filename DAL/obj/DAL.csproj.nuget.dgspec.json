@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\tawsela\\Backend\\Tawsela-APIs\\DAL\\DAL.csproj": {}
+    "C:\\Tawsela\\Tawsela-back\\DAL\\DAL.csproj": {}
   },
   "projects": {
-    "C:\\tawsela\\Backend\\Tawsela-APIs\\DAL\\DAL.csproj": {
+    "C:\\Tawsela\\Tawsela-back\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\tawsela\\Backend\\Tawsela-APIs\\DAL\\DAL.csproj",
+        "projectUniqueName": "C:\\Tawsela\\Tawsela-back\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\tawsela\\Backend\\Tawsela-APIs\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "C:\\tawsela\\Backend\\Tawsela-APIs\\DAL\\obj\\",
+        "projectPath": "C:\\Tawsela\\Tawsela-back\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\mark\\.nuget\\packages\\",
+        "outputPath": "C:\\Tawsela\\Tawsela-back\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mark\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
