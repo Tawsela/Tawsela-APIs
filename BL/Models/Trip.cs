@@ -19,7 +19,7 @@ namespace DAL.Models
         public string Departure { get; set; }
 
         [Required]
-        public string Distination { get; set; }
+        public string Destination { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -32,11 +32,9 @@ namespace DAL.Models
         [Required]
         public string Notice { get; set; }
 
-
-
         [Required]
         [DataType(DataType.Time)]
-        public DateTime Time { get; set; }
+        public string Time { get; set; }
 
 
         [InverseProperty("Driver")]

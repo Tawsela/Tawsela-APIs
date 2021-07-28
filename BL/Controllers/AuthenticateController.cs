@@ -79,9 +79,13 @@ namespace BL.Controllers
         [Route("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel model)
         {
-            var userExists = await userManager.FindByEmailAsync(model.Email);
-            if (userExists != null)
+            var emailExists = await userManager.FindByEmailAsync(model.Email);
+            if (emailExists != null)
                 return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "Email already exists!" });
+
+            var userNameExists = await userManager.FindByNameAsync(model.UserName);
+            if (userNameExists != null)
+                return StatusCode(StatusCodes.Status500InternalServerError, new Response { Status = "Error", Message = "User Name already exists!" });
 
             ApplicationUser user = new ApplicationUser()
             {
