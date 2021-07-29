@@ -114,14 +114,12 @@ namespace BL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CarImagePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CarModel")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CarNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CarOwner")

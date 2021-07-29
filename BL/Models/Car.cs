@@ -12,13 +12,10 @@ namespace DAL.Models
     {
         public int Id { get; set; }
     
-        [Required]
         public string CarNumber { get; set; }
         public string CarOwner { get; set; }
         public string CarModel { get; set; }
-        [Required]
         public string CarImagePath { get; set; }
-        [Required]
         public int AvailableSeats { get; set; }
 
         [ForeignKey("CarOwner")]

@@ -16,7 +16,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.Http.Cors;
 
 namespace BL
 {
@@ -34,9 +33,10 @@ namespace BL
         {
             services.AddCors(c =>
             {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             });
 
+           
             services.AddControllers();
 
             //Inject Database Connection string
@@ -90,7 +90,7 @@ namespace BL
             }
 
             app.UseRouting();
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseAuthentication();
             app.UseAuthorization();

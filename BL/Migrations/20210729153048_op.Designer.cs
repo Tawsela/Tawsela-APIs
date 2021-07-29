@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BL.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20210728005755_updatetwo")]
-    partial class updatetwo
+    [Migration("20210729153048_op")]
+    partial class op
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -116,14 +116,12 @@ namespace BL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CarImagePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CarModel")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CarNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CarOwner")
